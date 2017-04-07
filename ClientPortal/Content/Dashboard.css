@@ -1,0 +1,11 @@
+﻿body {
+}
+
+.large-container {
+    height: 500px;
+    background-color: lightgray;
+}
+
+.chart-container {
+    height: 300px;
+}

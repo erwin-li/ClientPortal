@@ -1,0 +1,155 @@
+﻿body, html {
+    height: 100%;
+}
+
+/* remove outer padding */
+.main-section .row {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*Remove rounded coners*/
+
+nav.nav-section.navbar {
+    border-radius: 0px;
+}
+
+nav.nav-section, .main-section {
+    -webkit-transition: margin 200ms ease-out;
+    -moz-transition: margin 200ms ease-out;
+    -o-transition: margin 200ms ease-out;
+    transition: margin 200ms ease-out;
+}
+
+/* .....NavBar: Icon only with coloring/layout.....*/
+
+/*small/medium side display*/
+@media (min-width: 768px) {
+
+    /*Allow main-section to be next to Nav*/
+    .main-section {
+        position: absolute;
+        width: calc(100% - 40px); /*keeps 100% minus nav size*/
+        margin-left: 40px;
+        float: right;
+    }
+
+    /*lets nav bar to be showed on mouseover */
+    nav.nav-section:hover + .main-section {
+        margin-left: 200px;
+    }
+
+    /*Center Brand*/
+    nav.nav-section.navbar.nav-section > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin-left: 0px;
+    }
+    /*Center Brand*/
+    nav.nav-section, nav.nav-section .navbar-header {
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*Center Icons*/
+    nav.nav-section a {
+        padding-right: 13px;
+    }
+
+    /*adds border top to first nav box */
+    nav.nav-section .navbar-nav > li:first-child {
+        border-top: 1px #e5e5e5 solid;
+    }
+
+    /*adds border to bottom nav boxes*/
+    nav.nav-section .navbar-nav > li {
+        border-bottom: 1px #e5e5e5 solid;
+    }
+
+    /* Colors/style dropdown box*/
+    nav.nav-section .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    /*allows nav box to use 100% width*/
+    nav.nav-section .navbar-collapse, nav.nav-section .container-fluid {
+        padding: 0 0px 0 0px;
+    }
+
+    /*colors dropdown box text */
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+
+    /*gives nav-section width/height*/
+    nav.nav-section {
+        width: 200px;
+        height: 100%;
+        margin-left: -160px;
+        float: left;
+        z-index: 8000;
+        margin-bottom: 0px;
+    }
+
+    /*give nav-section 100% width;*/
+    nav.nav-section li {
+        width: 100%;
+    }
+
+    /* Move nav to full on mouse over*/
+    nav.nav-section:hover {
+        margin-left: 0px;
+    }
+
+    /*for hiden things when navbar hidden*/
+    .forAnimate {
+        opacity: 0;
+    }
+}
+
+/* .....NavBar: Fully showing nav bar..... */
+
+/*@media (min-width: 1330px) {*/
+
+    /*Allow main-section to be next to Nav*/
+    /*.main-section {
+        width: calc(100% - 200px); /*keeps 100% minus nav size*/
+       /*margin-left: 200px;
+    }*/
+
+    /*Show all nav*/
+    /*nav.nav-section {
+        margin-left: 0px;
+        float: left;
+    }*/
+        /*Show hidden items on nav*/
+        /*nav.nav-section .forAnimate {
+            opacity: 1;
+        }
+}*/
+
+nav.nav-section .navbar-nav .open .dropdown-menu > li > a:hover, nav.nav-section .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #CCC;
+    background-color: transparent;
+}
+
+nav:hover .forAnimate {
+    opacity: 1;
+}
+
+section {
+    padding-left: 15px;
+}
+
+#main-section-top-bar {
+    height: 50px;
+    background-color: #222222;
+}
+
+

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/fontawesome")
+	<link href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.black.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.dataviz.black.min.css" rel="stylesheet" type="text/css" />
+	<script src="https://kendo.cdn.telerik.com/2017.1.223/js/jszip.min.js"></script>
+</head>
+<body>
+    <nav class="nav-section navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Customer Portal</a>
+                <span style="font-size:16px;" class="pull-right hidden-xs glyphicon showopacity glyphicon-dashboard"></span>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="@Url.Action("Index", "Dashboard")">Dashboard<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("Index", "Report")" class="dropdown-toggle" data-toggle="dropdown">Reports <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li><a href="@Url.Action("InboundReceiving", "Report")">Inbound Receiving</a></li>
+                            <li><a href="@Url.Action("Inventory", "Report")">Inventory</a></li>
+                            <li><a href="@Url.Action("InventoryAnalysis", "Report")">Inventory Analysis</a></li>
+                            <li><a href="@Url.Action("OutboundShipping", "Report")">Outbound Shipping</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Tracking<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>                  
+                </ul>
+            </div>
+        </div>
+
+        
+    </nav>
+
+    <div class="main-section">
+        @RenderBody()
+    </div>  
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
